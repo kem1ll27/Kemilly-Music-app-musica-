@@ -4,14 +4,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$USER_HOME$/Downloads/tiii-pw/pom.xml" />
-        <option value="$USER_HOME$/Downloads/tiii.pw/pom.xml" />
+        <option value="$PROJECT_DIR$/../Kemilly-Music-app-musica-/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$USER_HOME$/Downloads/tiii.pw/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="graalvm-ce-25" project-jdk-type="JavaSDK">
