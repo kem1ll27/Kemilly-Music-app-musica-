@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Kemilly Music</title>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarLogin(); verificarAdmin(); mostrarUsuario(); propagarSessaoNosLinks(); mostrarHistorico(); mostrarUsuariosAdmin(); mostrarMusicasAdmin(); mostrarPlaylistsAdmin();">
+
+<div class="menu">
+    <h2><i class="fa-solid fa-crown"></i> Kemilly Music</h2>
+    <ul>
+        <li class="ativo"><a href="/admin"><i class="fa-solid fa-shield"></i> Admin</a></li>
+        <li><a href="/perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+        <li><a href="/home"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="/buscar"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+        <li><a href="/biblioteca"><i class="fa-solid fa-layer-group"></i> Biblioteca</a></li>
+    </ul>
+</div>
+
+<div class="conteudo">
+
+    <div class="topo">
+        <h2>Painel do Administrador</h2>
+        <p id="nomeUsuario"></p>
+    </div>
+
+    <!-- RASTREABILIDADE -->
+    <div class="secao">
+        <h3><i class="fa-solid fa-clock"></i> Rastreabilidade do sistema</h3>
+        <div id="historico"></div>
+    </div>
+
+    <!-- USUÁRIOS -->
+    <div class="secao">
+        <h3><i class="fa-solid fa-users"></i> Usuários cadastrados</h3>
+        <table class="tabela-usuarios">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody id="listaUsuarios"></tbody>
+        </table>
+    </div>
+
+    <!-- GERENCIAR MÚSICAS -->
+    <div class="secao">
+        <h3><i class="fa-solid fa-music"></i> Gerenciar músicas</h3>
+
+        <form id="formMusica" class="form-admin" onsubmit="adicionarMusica(event)">
+            <input type="text" id="musicaTitulo" placeholder="Título da música" required>
+            <input type="text" id="musicaArtista" placeholder="Artista">
+            <input type="text" id="musicaImagem" placeholder="URL da imagem">
+            <input type="text" id="musicaLink" placeholder="URL do YouTube/link">
+            <select id="musicaCategoria">
+                <option value="RECENTE">Recente (aparece na Início)</option>
+                <option value="MAIS_OUVIDA">Mais ouvida (aparece na Biblioteca)</option>
+            </select>
+            <button type="submit">➕ Adicionar música</button>
+        </form>
+
+        <div id="listaMusicasAdmin" class="lista-admin"></div>
+    </div>
+
+    <!-- GERENCIAR PLAYLISTS -->
+    <div class="secao">
+        <h3><i class="fa-solid fa-bolt"></i> Gerenciar playlists</h3>
+
+        <form id="formPlaylist" class="form-admin" onsubmit="adicionarPlaylist(event)">
+            <input type="text" id="playlistTitulo" placeholder="Título da playlist" required>
+            <input type="text" id="playlistDescricao" placeholder="Descrição">
+            <input type="text" id="playlistImagem" placeholder="URL da imagem">
+            <input type="text" id="playlistLink" placeholder="URL da playlist">
+            <button type="submit">➕ Adicionar playlist</button>
+        </form>
+
+        <div id="listaPlaylistsAdmin" class="lista-admin"></div>
+    </div>
+
+    <div class="secao">
+        <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+    </div>
+
+</div>
+
+<script src="/js/login.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Kemilly Music</title>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarSeJaEstaLogado();">
+
+<div class="container">
+    <div class="box">
+        <h2><i class="fa-solid fa-music"></i> Kemilly Music</h2>
+        <h3>Entre na sua conta</h3>
+
+        <form onsubmit="return login(event)">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>
+            Ainda não tem uma conta?<br>
+            <a href="/">Clique aqui e faça sua conta</a>
+        </p>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>
+</body>
+</html>

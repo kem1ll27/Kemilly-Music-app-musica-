@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil - Kemilly Music</title>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarLogin(); mostrarPerfil(); mostrarFavoritosPerfil(); mostrarMenuAdmin(); propagarSessaoNosLinks();">
+
+<div class="menu">
+    <h2><i class="fa-solid fa-star"></i> Kemilly Music</h2>
+    <ul>
+        <li id="menuAdmin" style="display:none;"><a href="/admin"><i class="fa-solid fa-shield"></i> Admin</a></li>
+        <li class="ativo"><a href="/perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+        <li><a href="/home"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="/buscar"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+        <li><a href="/biblioteca"><i class="fa-solid fa-layer-group"></i> Biblioteca</a></li>
+    </ul>
+</div>
+
+<div class="conteudo">
+
+    <div class="topo">
+        <h2>Meu Perfil</h2>
+    </div>
+
+    <div class="box perfil-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto do usuário" class="perfil-img">
+        <h3 id="nomePerfil">Nome do usuário</h3>
+        <p id="emailPerfil">email@email.com</p>
+        <br>
+        <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+    </div>
+
+    <div class="secao">
+        <h3><i class="fa-solid fa-trophy"></i> Suas músicas favoritas</h3>
+        <div id="listaFavoritosPerfil"></div>
+    </div>
+
+</div>
+
+<script src="/js/login.js"></script>
+<script src="/js/perfil.js"></script>
+</body>
+</html>

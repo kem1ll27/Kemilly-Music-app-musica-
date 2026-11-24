@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Kemilly Music</title>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="verificarLogin(); mostrarUsuario(); mostrarMenuAdmin(); propagarSessaoNosLinks(); carregarMusicasBiblioteca(); carregarPlaylistsBiblioteca();">
+
+<div class="menu">
+    <h2><i class="fa-solid fa-star"></i> Kemilly Music</h2>
+    <ul>
+        <li id="menuAdmin" style="display:none;"><a href="/admin"><i class="fa-solid fa-shield"></i> Admin</a></li>
+        <li><a href="/perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+        <li><a href="/home"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="/buscar"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a></li>
+        <li class="ativo"><a href="/biblioteca"><i class="fa-solid fa-layer-group"></i> Biblioteca</a></li>
+    </ul>
+</div>
+
+<div class="conteudo">
+
+    <div class="topo">
+        <h2>Sua Biblioteca</h2>
+        <p id="nomeUsuario"></p>
+    </div>
+
+    <div class="secao">
+        <h3><i class="fa-solid fa-bolt"></i> Playlists</h3>
+        <div class="cards" id="cardsPlaylists">
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <div class="secao">
+        <h3><i class="fa-solid fa-heart"></i> Mais ouvidas</h3>
+        <div class="cards" id="cardsMaisOuvidas">
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/login.js"></script>
+<script src="/js/favoritos.js"></script>
+<script src="/js/biblioteca.js"></script>
+</body>
+</html>
